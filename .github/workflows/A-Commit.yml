@@ -16,10 +16,35 @@ jobs:
       - name: Modificar archivo con comentario aleatorio
         run: |
           frases=("<!-- Mejorando estructura -->"
-                  "<!-- Corrigiendo indentación -->"
-                  "<!-- Ajuste menor en sintaxis -->"
-                  "<!-- Agregado comentario de estudio -->"
-                  "<!-- Actualización de contenido -->")
+          "<!-- Corrigiendo indentación -->"
+          "<!-- Ajuste menor en sintaxis -->"
+          "<!-- Agregado comentario de estudio -->"
+          "<!-- Actualización de contenido -->"
+          "<!-- Refactorización de código -->"
+          "<!-- Limpieza de código innecesario -->"
+          "<!-- Optimización de carga -->"
+          "<!-- Mejoras en accesibilidad -->"
+          "<!-- Actualización de dependencias -->"
+          "<!-- Corrección de errores menores -->"
+          "<!-- Ajustes en estilos CSS -->"
+          "<!-- Mejoras en responsive design -->"
+          "<!-- Actualización de meta tags -->"
+          "<!-- Añadido soporte para navegadores -->"
+          "<!-- Mejoras en SEO -->"
+          "<!-- Ajustes en scripts JS -->"
+          "<!-- Corrección de enlaces rotos -->"
+          "<!-- Mejoras en rendimiento -->"
+          "<!-- Ajustes en estructura HTML -->"
+          "<!-- Actualización de librerías externas -->"
+          "<!-- Añadidos comentarios explicativos -->"
+          "<!-- Corrección de validación W3C -->"
+          "<!-- Mejoras en experiencia de usuario -->"
+          "<!-- Refactorización de funciones JS -->"
+          "<!-- Ajustes en tipografía -->"
+          "<!-- Eliminación de código duplicado -->"
+          "<!-- Mejoras en carga diferida -->"
+          "<!-- Ajustes en rutas relativas -->"
+          "<!-- Actualización de favicon -->")
           comentario=${frases[$RANDOM % ${#frases[@]}]}
           echo $comentario >> index.html
 
