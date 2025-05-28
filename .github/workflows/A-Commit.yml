@@ -1,0 +1,35 @@
+name: 🛠️ Simulador de contribuciones reales
+
+on:
+  schedule:
+    - cron: '23 13 * * 1,3,5'  # Lunes, miércoles y viernes a las 13:23 UTC
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+
+      - name: Modificar archivo con comentario aleatorio
+        run: |
+          frases=("<!-- Mejorando estructura -->"
+                  "<!-- Corrigiendo indentación -->"
+                  "<!-- Ajuste menor en sintaxis -->"
+                  "<!-- Agregado comentario de estudio -->"
+                  "<!-- Actualización de contenido -->")
+          comentario=${frases[$RANDOM % ${#frases[@]}]}
+          echo $comentario >> index.html
+
+      - name: Configurar usuario Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Hacer commit y push
+        run: |
+          git add index.html
+          git commit -m "💻 $comentario"
+          git push
