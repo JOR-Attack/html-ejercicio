@@ -15,38 +15,63 @@ jobs:
 
       - name: Modificar archivo con comentario aleatorio
         run: |
-          frases=("<!-- Mejorando estructura -->"
-          "<!-- Corrigiendo indentación -->"
-          "<!-- Ajuste menor en sintaxis -->"
-          "<!-- Agregado comentario de estudio -->"
-          "<!-- Actualización de contenido -->"
-          "<!-- Refactorización de código -->"
-          "<!-- Limpieza de código innecesario -->"
-          "<!-- Optimización de carga -->"
-          "<!-- Mejoras en accesibilidad -->"
-          "<!-- Actualización de dependencias -->"
-          "<!-- Corrección de errores menores -->"
-          "<!-- Ajustes en estilos CSS -->"
-          "<!-- Mejoras en responsive design -->"
-          "<!-- Actualización de meta tags -->"
-          "<!-- Añadido soporte para navegadores -->"
-          "<!-- Mejoras en SEO -->"
-          "<!-- Ajustes en scripts JS -->"
-          "<!-- Corrección de enlaces rotos -->"
-          "<!-- Mejoras en rendimiento -->"
-          "<!-- Ajustes en estructura HTML -->"
-          "<!-- Actualización de librerías externas -->"
-          "<!-- Añadidos comentarios explicativos -->"
-          "<!-- Corrección de validación W3C -->"
-          "<!-- Mejoras en experiencia de usuario -->"
-          "<!-- Refactorización de funciones JS -->"
-          "<!-- Ajustes en tipografía -->"
-          "<!-- Eliminación de código duplicado -->"
-          "<!-- Mejoras en carga diferida -->"
-          "<!-- Ajustes en rutas relativas -->"
-          "<!-- Actualización de favicon -->")
-          comentario=${frases[$RANDOM % ${#frases[@]}]}
-          echo $comentario >> index.html
+          # Archivos disponibles
+          archivos=("index.html" "style.css" "script.js")
+          archivo=${archivos[$RANDOM % ${#archivos[@]}]}
+
+          # Comentarios para cada tipo de archivo
+          comentarios_html=(
+            "<!-- Mejorando estructura -->"
+            "<!-- Corrigiendo indentación -->"
+            "<!-- Ajuste menor en sintaxis -->"
+            "<!-- Agregado comentario de estudio -->"
+            "<!-- Actualización de contenido -->"
+            "<!-- Refactorización de código -->"
+            "<!-- Limpieza de código innecesario -->"
+            "<!-- Optimización de carga -->"
+            "<!-- Mejoras en accesibilidad -->"
+            "<!-- Corrección de enlaces rotos -->"
+            "<!-- Ajustes en estructura HTML -->"
+            "<!-- Añadidos comentarios explicativos -->"
+          )
+
+          comentarios_css=(
+            "/* Refactorización de estilos */"
+            "/* Ajuste visual menor */"
+            "/* Limpieza de propiedades innecesarias */"
+            "/* Mejora en organización del CSS */"
+            "/* Ajuste en colores o tipografías */"
+            "/* Comentario de ayuda para futuros cambios */"
+            "/* Mejora en diseño responsivo */"
+          )
+
+          comentarios_js=(
+            "// Optimización de función"
+            "// Limpieza de código JS innecesario"
+            "// Comentario de prueba de rendimiento"
+            "// Ajuste en lógica de eventos"
+            "// Agregado comentario de depuración"
+            "// Mejora en nombres de variables"
+            "// Refactorización de funciones"
+          )
+
+          # Selección de comentario según archivo
+          if [[ "$archivo" == "index.html" ]]; then
+            comentarios=("${comentarios_html[@]}")
+          elif [[ "$archivo" == "style.css" ]]; then
+            comentarios=("${comentarios_css[@]}")
+          else
+            comentarios=("${comentarios_js[@]}")
+          fi
+
+          comentario=${comentarios[$RANDOM % ${#comentarios[@]}]}
+
+          # Escribir comentario al final del archivo
+          echo "$comentario" >> "$archivo"
+
+          # Guardar para usar en el siguiente paso
+          echo "archivo_modificado=$archivo" >> $GITHUB_ENV
+          echo "comentario_usado=$comentario" >> $GITHUB_ENV
 
       - name: Configurar usuario Git
         run: |
@@ -55,6 +80,6 @@ jobs:
 
       - name: Hacer commit y push
         run: |
-          git add index.html
-          git commit -m "💻 $comentario"
+          git add "$archivo_modificado"
+          git commit -m "💻 Modificado $archivo_modificado: $comentario_usado"
           git push
