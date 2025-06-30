@@ -6,3 +6,4 @@
 // Ajuste en lógica de eventos
 // Refactorización de funciones
 // Optimización de función
+// Refactorización de funciones
