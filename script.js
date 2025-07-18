@@ -9,3 +9,4 @@
 // Refactorización de funciones
 // Refactorización de funciones
 // Refactorización de funciones
+// Mejora en nombres de variables
