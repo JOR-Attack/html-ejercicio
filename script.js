@@ -11,3 +11,4 @@
 // Refactorización de funciones
 // Mejora en nombres de variables
 // Optimización de función
+// Comentario de prueba de rendimiento
