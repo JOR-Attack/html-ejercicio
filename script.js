@@ -15,3 +15,4 @@
 // Ajuste en lógica de eventos
 // Refactorización de funciones
 // Comentario de prueba de rendimiento
+// Optimización de función
