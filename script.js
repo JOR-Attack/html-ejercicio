@@ -17,3 +17,4 @@
 // Comentario de prueba de rendimiento
 // Optimización de función
 // Limpieza de código JS innecesario
+// Ajuste en lógica de eventos
