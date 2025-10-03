@@ -20,3 +20,4 @@
 // Ajuste en lógica de eventos
 // Comentario de prueba de rendimiento
 // Mejora en nombres de variables
+// Refactorización de funciones
