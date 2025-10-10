@@ -21,3 +21,4 @@
 // Comentario de prueba de rendimiento
 // Mejora en nombres de variables
 // Refactorización de funciones
+// Comentario de prueba de rendimiento
