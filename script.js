@@ -22,3 +22,4 @@
 // Mejora en nombres de variables
 // Refactorización de funciones
 // Comentario de prueba de rendimiento
+// Limpieza de código JS innecesario
