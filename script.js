@@ -26,3 +26,4 @@
 // Limpieza de código JS innecesario
 // Limpieza de código JS innecesario
 // Optimización de función
+// Refactorización de funciones
