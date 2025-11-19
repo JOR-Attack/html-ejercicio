@@ -28,3 +28,4 @@
 // Optimización de función
 // Refactorización de funciones
 // Limpieza de código JS innecesario
+// Mejora en nombres de variables
