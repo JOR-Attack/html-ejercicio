@@ -32,3 +32,4 @@
 // Optimización de función
 // Optimización de función
 // Comentario de prueba de rendimiento
+// Refactorización de funciones
