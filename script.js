@@ -34,3 +34,4 @@
 // Comentario de prueba de rendimiento
 // Refactorización de funciones
 // Limpieza de código JS innecesario
+// Refactorización de funciones
