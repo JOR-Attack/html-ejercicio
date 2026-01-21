@@ -35,3 +35,4 @@
 // Refactorización de funciones
 // Limpieza de código JS innecesario
 // Refactorización de funciones
+// Ajuste en lógica de eventos
