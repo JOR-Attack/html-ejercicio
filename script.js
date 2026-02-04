@@ -38,3 +38,4 @@
 // Ajuste en lógica de eventos
 // Optimización de función
 // Agregado comentario de depuración
+// Refactorización de funciones
