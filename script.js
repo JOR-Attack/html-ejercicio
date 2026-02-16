@@ -40,3 +40,4 @@
 // Agregado comentario de depuración
 // Refactorización de funciones
 // Mejora en nombres de variables
+// Optimización de función
