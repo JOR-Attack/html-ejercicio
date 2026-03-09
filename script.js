@@ -43,3 +43,4 @@
 // Optimización de función
 // Limpieza de código JS innecesario
 // Mejora en nombres de variables
+// Limpieza de código JS innecesario
