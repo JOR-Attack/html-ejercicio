@@ -47,3 +47,4 @@
 // Mejora en nombres de variables
 // Limpieza de código JS innecesario
 // Ajuste en lógica de eventos
+// Comentario de prueba de rendimiento
