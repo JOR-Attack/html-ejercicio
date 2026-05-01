@@ -51,3 +51,4 @@
 // Ajuste en lógica de eventos
 // Agregado comentario de depuración
 // Limpieza de código JS innecesario
+// Refactorización de funciones
