@@ -55,3 +55,4 @@
 // Refactorización de funciones
 // Limpieza de código JS innecesario
 // Mejora en nombres de variables
+// Optimización de función
