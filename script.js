@@ -57,3 +57,4 @@
 // Mejora en nombres de variables
 // Optimización de función
 // Limpieza de código JS innecesario
+// Limpieza de código JS innecesario
