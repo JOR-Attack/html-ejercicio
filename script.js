@@ -64,3 +64,4 @@
 // Agregado comentario de depuración
 // Ajuste en lógica de eventos
 // Agregado comentario de depuración
+// Comentario de prueba de rendimiento
