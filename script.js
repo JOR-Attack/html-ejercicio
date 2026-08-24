@@ -67,3 +67,4 @@
 // Comentario de prueba de rendimiento
 // Agregado comentario de depuración
 // Optimización de función
+// Comentario de prueba de rendimiento
