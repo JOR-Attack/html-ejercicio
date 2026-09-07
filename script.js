@@ -69,3 +69,4 @@
 // Optimización de función
 // Comentario de prueba de rendimiento
 // Limpieza de código JS innecesario
+// Mejora en nombres de variables
