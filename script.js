@@ -70,3 +70,4 @@
 // Comentario de prueba de rendimiento
 // Limpieza de código JS innecesario
 // Mejora en nombres de variables
+// Agregado comentario de depuración
