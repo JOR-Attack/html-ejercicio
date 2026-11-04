@@ -76,3 +76,4 @@
 // Agregado comentario de depuración
 // Limpieza de código JS innecesario
 // Mejora en nombres de variables
+// Optimización de función
